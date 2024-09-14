@@ -65,6 +65,6 @@ echo INVENTORY MANAGEMENT URL = "http://$INVENTORY_MANAGEMENT_IP:$INVENTORY_MANA
 echo -e "-----------------------------------------------------------------------------------\n"
 
 # Launch Browser Showing Services
-echo -e "${p}Opening Services in Browser Shortly...${d}"
-sleep 30
-start "" "chrome.exe" --new-window "$BOOK_CATALOG_URL" "$INVENTORY_MANAGEMENT_URL"
+# echo -e "${p}Opening Services in Browser Shortly...${d}"
+# sleep 30
+# start "" "chrome.exe" --new-window "$BOOK_CATALOG_URL" "$INVENTORY_MANAGEMENT_URL"
