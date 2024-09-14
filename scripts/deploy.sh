@@ -24,4 +24,4 @@ envsubst < ./scripts/kubernetes/deployment.yaml | kubectl apply -f -
 echo -e "\n${p}Deployment complete.${d}\n"
 
 # Display Status & Launch Browser
-./scripts/display-status-launch-browser.sh
+chmod +x ./scripts/display-status-launch-browser.sh
