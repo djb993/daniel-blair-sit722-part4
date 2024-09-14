@@ -24,8 +24,7 @@ envsubst < ./scripts/kubernetes/deployment.yaml | kubectl apply -f -
 
 echo -e "\n${p}Deployment complete.${d}\n"
 
-kubectl config get-contexts
-kubectl config current-context
+kubectl get pods
 
 # Display Status & Launch Browser
 # ./scripts/display-status-launch-browser.sh
