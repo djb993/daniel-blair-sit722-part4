@@ -16,8 +16,8 @@ echo -e "\n${p}Deploying Microservices...${d}\n"
 export KUBECONFIG="$HOME/secrets/kubeconfig.txt"
 
 # Debugging
-# echo "KUBECONFIG is set to: $KUBECONFIG"
-# cat "$KUBECONFIG"
+echo "KUBECONFIG is set to: $KUBECONFIG"
+cat "$KUBECONFIG"
 
 envsubst < ./scripts/kubernetes/deployment.yaml | kubectl apply -f -
 
