@@ -1,7 +1,7 @@
 # ===============================================================
 #         This Shell File Deploys Both Microservices         
 # ===============================================================
-#            RUN - .scripts/deploy.sh  (in Git Bash)             
+#            RUN - ./scripts/deploy.sh  (in Git Bash)             
 # ---------------------------------------------------------------
 
 # Terminal text output colour variables: purple & default
@@ -26,7 +26,6 @@ echo -e "\n${p}Deployment complete.${d}\n"
 
 
 # Display Status & Launch Browser
-# ./scripts/display-status-launch-browser.sh
 echo -e "\n${p}Waiting 60 seconds for container creation to complete...${d}\n"
 sleep 60
 

@@ -1,7 +1,7 @@
 # ===============================================================
 #         This Shell File Deletes Both Microservices         
 # ===============================================================
-#            RUN - .scripts/delete.sh  (in Git Bash)             
+#            RUN - ./scripts/delete.sh  (in Git Bash)             
 # ---------------------------------------------------------------
 
 # Terminal text output colour variables: purple & default
@@ -25,6 +25,6 @@ pwd
 echo -e "\n${p}Deleting Azure Platform Resources...${d}\n"
 terraform destroy -auto-approve
 
-echo -e "\n${p}Removing Images...${d}\n"
-docker rmi djb993cr.azurecr.io/book-catalog-service:1
-docker rmi djb993cr.azurecr.io/inventory-management-service:1
+# echo -e "\n${p}Removing Images...${d}\n"
+# docker rmi djb993cr.azurecr.io/book-catalog-service:1
+# docker rmi djb993cr.azurecr.io/inventory-management-service:1
