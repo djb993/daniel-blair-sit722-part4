@@ -42,6 +42,3 @@ jobs:
       # Deploy Microservice.
       - name: Deploy
         run: ./scripts/deploy.sh
-      # Display Output.
-      - name: Display
-        run: ./scripts/display-status-launch-browser.sh
