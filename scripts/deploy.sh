@@ -12,13 +12,11 @@ set -euo pipefail
 
 echo -e "\n${p}Deploying Microservices...${d}\n"
 
-cat $HOME/secrets/kubeconfig.txt
-
 # Ensure KUBECONFIG is set
 export KUBECONFIG="$HOME/secrets/kubeconfig.txt"
 
 # Debugging
-echo "KUBECONFIG is set to: $KUBECONFIG"
+# echo "KUBECONFIG is set to: $KUBECONFIG"
 
 envsubst < ./scripts/kubernetes/deployment.yaml | kubectl apply -f -
 
