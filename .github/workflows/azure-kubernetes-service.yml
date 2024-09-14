@@ -39,6 +39,9 @@ jobs:
         uses: azure/setup-kubectl@v1
         with:
             version: v1.24.2
-      # Deploy microservice.
+      # Deploy Microservice.
       - name: Deploy
         run: ./scripts/deploy.sh
+      # Display Output.
+      - name: Display
+        run: ./scripts/display-status-launch-browser.sh
