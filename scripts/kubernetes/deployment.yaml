@@ -28,7 +28,8 @@ spec:
             - containerPort: 8000
           env:
             - name: DATABASE_URL
-              value: "postgresql://cloud_native_part4_db_c1oi_user:cd1pHVFVCE5HmDOEfYe7W7hcgcCUmuRL@dpg-cqkcjjjqf0us73c78ha0-a.singapore-postgres.render.com/cloud_native_part4_db_c1oi"
+              # value: "postgresql://cloud_native_part4_db_c1oi_user:cd1pHVFVCE5HmDOEfYe7W7hcgcCUmuRL@dpg-cqkcjjjqf0us73c78ha0-a.singapore-postgres.render.com/cloud_native_part4_db_c1oi"
+              value: "postgresql://cloud_native_part4_db_fj1s_user:fGcpT25oEM4H6rFJVbCXwtuhy4sks5eO@dpg-crbgi53qf0us73dcbufg-a.singapore-postgres.render.com/cloud_native_part4_db_fj1s"
 ---
 # Service for Book Catalog Service
 apiVersion: v1
@@ -68,7 +69,8 @@ spec:
             - containerPort: 8001
           env:
             - name: DATABASE_URL
-              value: "postgresql://admin:E5OJuKRE14iotwfsvHwJeqsjaKK1eKmO@dpg-cq0nb2aju9rs73b0500g-a.oregon-postgres.render.com/part2"
+              # value: "postgresql://admin:E5OJuKRE14iotwfsvHwJeqsjaKK1eKmO@dpg-cq0nb2aju9rs73b0500g-a.oregon-postgres.render.com/part2"
+              value: "postgresql://cloud_native_part4_db_fj1s_user:fGcpT25oEM4H6rFJVbCXwtuhy4sks5eO@dpg-crbgi53qf0us73dcbufg-a.singapore-postgres.render.com/cloud_native_part4_db_fj1s"
 ---
  # Servcie for Inventory Management Service 
 apiVersion: v1
