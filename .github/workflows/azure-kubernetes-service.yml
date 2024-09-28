@@ -17,34 +17,10 @@ jobs:
       REGISTRY_UN: ${{ secrets.REGISTRY_UN }}
       REGISTRY_PW: ${{ secrets.REGISTRY_PW  }}
       LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
-      ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
     steps:
       # Check-out repository under $GITHUB_WORKSPACE.
       - uses: actions/checkout@v3
-
-      # Install Terraform
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
-
-      # Initialise Terraform
-      - name: Terraform Init
-        run: terraform init
-        working-directory: ./terraform
-
-      # Run Terraform Plan
-      - name: Terraform Plan
-        run: terraform plan -out=tfplan
-        working-directory: ./terraform
-
-      # Apply Terraform changes (only on master branch)
-      - name: Terraform Apply
-        if: github.ref == 'refs/heads/master'
-        run: terraform apply -auto-approve tfplan
-        working-directory: ./terraform
-      
       - name: Set script permissions
         run: chmod +x ./scripts/*.sh
       # Build Docker image.
